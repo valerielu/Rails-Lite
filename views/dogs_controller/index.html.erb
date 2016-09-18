@@ -1,0 +1,12 @@
+<h1>ALL THE DOGS</h1>
+
+<% if flash["notice"] %>
+  Notice: <%= flash["notice"] %>
+<% end %>
+<!-- the to_json turns everything into strings and JSON parse returns the key symbols as strings -->
+<!-- you will read nil if you read flash[:notice] -->
+
+<%= "under flash" %>
+
+<pre>Dog Data: <%= @dogs.to_s %></pre>
+<a href="/dogs/new">New Dog!</a>

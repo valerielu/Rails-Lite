@@ -1,0 +1,24 @@
+<!-- The stack trace
+A preview of the source code where the exception was raised
+The exception message -->
+
+<%= "Error Type: " + e.class.to_s %>
+<br>
+<%= "Message: " + e.message %>
+<br>
+<%= "Stack Trace:" %>
+<ul>
+  <% e.backtrace.each do |line| %>
+  <li> <%= line %> </li>
+  <% end %>
+</ul>
+
+<br>
+<%= "Source Code:" %>
+
+<ul>
+
+  <% code_line.each do |line| %>
+  <li> <%= line %> </li>
+  <% end %>
+</ul>
